@@ -9,9 +9,9 @@
 (function(PLUGIN_ID) {
     'use strict';
 
-    // Get plugin configuration settings
+    // Get plug-in configuration settings
     var CONFIG = kintone.plugin.app.getConfig(PLUGIN_ID);
-    // Get each settings
+    // Get each setting
     if (!CONFIG) {
         return false;
     }
@@ -30,7 +30,7 @@
             app: kintone.app.getId()
         };
         return kintone.api('/k/v1/app/form/fields', 'GET', params).then(function(resp) {
-            // Obtain label name of Radio button field
+            // Obtain label name of Radio Button field
             var name = resp.properties[RADIOBUTTON].label;
             if (selection === RADIO_VALUE) {
                 var errMessage = "Please select other than \"" + selection + "\"";
