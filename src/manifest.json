@@ -27,7 +27,7 @@
     "en": "Radio Button Validation Plug-in"
   },
   "description": {
-    "en": "This sample plug-in restricts the user from choosing the first value in the Radio Button field, and displays an error message on the record."
+    "en": "This sample plug-in prevents the user from choosing the first value in the Radio Button field, and displays an error message on the record."
   },
   "homepage_url": {
     "en": "https://developer.kintone.io/hc/en-us/articles/115009412848"
