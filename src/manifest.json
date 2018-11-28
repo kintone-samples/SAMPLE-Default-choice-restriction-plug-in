@@ -24,7 +24,7 @@
     ]
   },
   "name": {
-    "en": "Radio Button Validation Plug-in"
+    "en": "Default Choice Restriction Plug-in"
   },
   "description": {
     "en": "This sample plug-in prevents the user from choosing the first value in the Radio Button field, and displays an error message on the record."
