@@ -1,4 +1,4 @@
-# [Sample plug-in: Radio Button Validation Plug-in]
+# [Sample plug-in: Default Choice Restriction Plug-in]
 ## Purpose of the Sample Plug-in
 This sample plug-in is available for educational purposes.  
 Use this plug-in to understand how Kintone plug-ins work, and how they are structured.
