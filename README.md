@@ -5,8 +5,8 @@ Use this plug-in to understand how Kintone plug-ins work, and how they are struc
 A non-packaged version written with a single JavaScript file can be found here https://developer.kintone.io/hc/en-us/articles/115009412848
 
 ## What the plug-in does
-This plug-in restricts the user from choosing the first value in the Radio Button field, and displays an error message on the record.
-When a user tries to save a record with the first value in the Radio Button field selected, the error message will be displayed and the record will not be saved.
+This plug-in restricts the user from choosing the default value in the Radio Button field, and displays an error message on the record.
+When a user tries to save a record with the default value in the Radio Button field selected, the error message will be displayed and the record will not be saved.
 The plug-in settings page allows the user to choose which Radio Button field will be used.
 
 ## Plug-in directory structure
