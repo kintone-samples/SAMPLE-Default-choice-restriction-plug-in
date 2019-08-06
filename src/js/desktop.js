@@ -7,39 +7,39 @@
  * Licensed under the MIT License
  */
 (function(PLUGIN_ID) {
-    'use strict';
+  'use strict';
 
-    // Get plug-in configuration settings
-    var CONFIG = kintone.plugin.app.getConfig(PLUGIN_ID);
-    // Get each setting
-    if (!CONFIG) {
-        return false;
-    }
+  // Get plug-in configuration settings
+  var CONFIG = kintone.plugin.app.getConfig(PLUGIN_ID);
+  // Get each setting
+  if (!CONFIG) {
+    return false;
+  }
 
-    var RADIOBUTTON = CONFIG.radio_button;
-    var RADIO_VALUE = CONFIG.default_value;
+  var RADIOBUTTON = CONFIG.radio_button;
+  var RADIO_VALUE = CONFIG.default_value;
 
-    // Run code when saving a record
-    var ev = ['app.record.create.submit', 'app.record.index.edit.submit', 'app.record.edit.submit'];
-    kintone.events.on(ev, function(event) {
+  // Run code when saving a record
+  var ev = ['app.record.create.submit', 'app.record.index.edit.submit', 'app.record.edit.submit'];
+  kintone.events.on(ev, function(event) {
 
-        // Get record data
-        var record = event.record;
-        var selection = record[RADIOBUTTON].value;
-        var params = {
-            app: kintone.app.getId()
-        };
-        return kintone.api('/k/v1/app/form/fields', 'GET', params).then(function(resp) {
-            // Obtain label name of Radio Button field
-            var name = resp.properties[RADIOBUTTON].label;
-            if (selection === RADIO_VALUE) {
-                var errMessage = "Please select other than \"" + selection + "\"";
-                // Show message underneath field
-                record[RADIOBUTTON].error = errMessage;
-                // Show message at top of record
-                event.error = errMessage + " for the field \"" + name + "\"";
-            }
-            return event;
-        });
+    // Get record data
+    var record = event.record;
+    var selection = record[RADIOBUTTON].value;
+    var params = {
+      app: kintone.app.getId()
+    };
+    return kintone.api('/k/v1/app/form/fields', 'GET', params).then(function(resp) {
+      // Obtain label name of Radio Button field
+      var name = resp.properties[RADIOBUTTON].label;
+      if (selection === RADIO_VALUE) {
+        var errMessage = "Please select other than \"" + selection + "\"";
+        // Show message underneath field
+        record[RADIOBUTTON].error = errMessage;
+        // Show message at top of record
+        event.error = errMessage + " for the field \"" + name + "\"";
+      }
+      return event;
     });
+  });
 })(kintone.$PLUGIN_ID);
