@@ -54,7 +54,10 @@ jQuery.noConflict();
     var radio_button = $radioBtn.val();
     config.radio_button = radio_button;
     config.default_value = DEFAULT[radio_button];
-    kintone.plugin.app.setConfig(config);
+    kintone.plugin.app.setConfig(config, function() {
+      alert('The plug-in settings have been saved. Please update the app!');
+      window.location.href = '/k/admin/app/flow?app=' + kintone.app.getId();
+    });
   });
   // Process when 'Cancel' is clicked
   $cancelButton.click(function() {
