@@ -11,7 +11,7 @@ jQuery.noConflict();
 
   var CONF = kintone.plugin.app.getConfig(PLUGIN_ID);
   var $form = $('.js-submit-settings');
-  var $cancelButton = $('#js-cancel-button');
+  var $cancelButton = $('.js-cancel-button');
   var $radioBtn = $('select[name="js-select-radio-button-field"]');
   var DEFAULT = {};
 
