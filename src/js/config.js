@@ -50,7 +50,7 @@ jQuery.noConflict();
   // Set input values when 'Save' button is clicked
   $form.on('submit', function(e) {
     e.preventDefault();
-    var config = [];
+    var config = {};
     var radio_button = $radioBtn.val();
     config.radio_button = radio_button;
     config.default_value = DEFAULT[radio_button];
