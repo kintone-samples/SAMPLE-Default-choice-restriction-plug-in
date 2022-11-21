@@ -1,6 +1,6 @@
 {
   "manifest_version": 1,
-  "version": 1,
+  "version": "1.0.2",
   "type": "APP",
   "desktop": {
     "js": [
@@ -30,6 +30,6 @@
     "en": "This sample plug-in prevents the user from choosing the default value in the Radio Button field, and displays an error message on the record."
   },
   "homepage_url": {
-    "en": "https://developer.kintone.io/hc/en-us/articles/360010196793"
+    "en": "https://kintone.dev/en/plugins/simple-samples/default-choice-restriction-plug-in/"
   }
 }
